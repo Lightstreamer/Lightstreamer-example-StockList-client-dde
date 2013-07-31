@@ -1,0 +1,2 @@
+This folder should contain the library file needed to build the Demo.<br> 
+Please drop here the ls-client.jar from the <b>Lightstreamer Java SE Client Library</b>, you can find it in LS_HOME/DOCS-SDKs/sdk_client_java_se/lib.
