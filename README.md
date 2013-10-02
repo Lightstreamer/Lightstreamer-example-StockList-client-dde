@@ -7,7 +7,7 @@ This project includes a demo client showing integration between Lightstreamer Ja
 <table>
   <tr>
     <td style="text-align: left">
-      &nbsp;<a href="http://www.lightstreamer.com/demo/Java_DDEDemo_Basic/demo.jnlp" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_excelleg.png"></a>&nbsp;
+      &nbsp;<a href="http://www.lightstreamer.com/demo/Java_DDEDemo_Basic/demo.jnlp" target="_blank"><img src="screen_excelleg.png"></a>&nbsp;
       
     </td>
     <td>
@@ -94,4 +94,4 @@ The factory configuration of Lightstreamer server already provides this adapter 
 # Lightstreamer Compatibility Notes #
 
 - Compatible with Lightstreamer Java Client API v. 2.5.2 or newer.
-- For Lightstreamer Allegro+, Presto, Vivace.
+- For Lightstreamer Allegro (+ Java Client API support), Presto, Vivace.
