@@ -1,4 +1,5 @@
 # Lightstreamer - Basic Stock-List Demo - Excel (DDE) Client #
+<!-- START DESCRIPTION Basic Stock-List Demo -->
 
 This project includes a demo client showing integration between Lightstreamer Java SE Client and Dynamic Data Exchange (DDE) Server for Excel.
 
@@ -35,6 +36,8 @@ Check out the sources for further explanations.
   
 <i>NOTE: not all the functionalities of the Lightstreamer Java SE Client & DDE Server demo are exposed by the classes listed above. You can easily expand those functionalities using the [Lightstreamer Java SE Client API](http://www.lightstreamer.com/docs/client_javase_javadoc/index.html) as a reference.<br>
 If in trouble check out the [specific Lightstreamer forum](http://www.lightstreamer.com/vb/forumdisplay.php?f=12). </i>
+
+<!-- END DESCRIPTION Basic Stock-List Demo -->
 
 # Build #
 
@@ -76,9 +79,12 @@ The factory configuration of Lightstreamer server already provides this adapter 
 # See Also #
 
 ## Lightstreamer Adapters needed by this demo client ##
+<!-- START RELATED_ENTRIES -->
 
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
 * [Lightstreamer - Reusable Metadata Adapters - Java Adapter](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
+
+<!-- END RELATED_ENTRIES -->
 
 ## Similar demo clients that may interest you ##
 
