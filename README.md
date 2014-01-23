@@ -1,20 +1,10 @@
 # Lightstreamer - Basic Stock-List Demo - Excel (DDE) Client #
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-dde -->
 
-This project includes a demo client showing integration between Lightstreamer Java SE Client and Dynamic Data Exchange (DDE) Server for Excel.
+This project includes a demo client showing integration between [Lightstreamer Java SE Client](http://www.lightstreamer.com/docs/client_javase_api/index.html) and [Dynamic Data Exchange (DDE)](http://en.wikipedia.org/wiki/Dynamic_Data_Exchange) Server for Excel.
 
-<table>
-  <tr>
-    <td style="text-align: left">
-      &nbsp;<a href="http://www.lightstreamer.com/demo/Java_DDEDemo_Basic/demo.jnlp" target="_blank"><img src="screen_excelleg.png"></a>&nbsp;
-      
-    </td>
-    <td>
-      &nbsp;Click here to download and install the application:<br>
-      &nbsp;<a href="http://www.lightstreamer.com/demo/Java_DDEDemo_Basic/demo.jnlp" target="_blank">http://www.lightstreamer.com/demo/Java_DDEDemo_Basic/demo.jnlp</a>
-    </td>
-  </tr>
-</table>
+[![screenshot](screen_excel_large.png)](http://demos.lightstreamer.com/Java_DDEDemo_Basic/demo.jnlp)<br>
+Click here to download and install the application: [http://demos.lightstreamer.com/Java_DDEDemo_Basic/demo.jnlp](http://demos.lightstreamer.com/Java_DDEDemo_Basic/demo.jnlp)<br>
 
 [Dynamic Data Exchange (DDE)](http://en.wikipedia.org/wiki/Dynamic_Data_Exchange) is a technology for communication between multiple applications under Microsoft Windows, often used for automatically filling a Microsoft Excel spreadsheet with data.<br>
 This Java application is basically a DDE bridge, which injects the real-time updates received from Lightstreamer Server into an Excel spreadsheet. The quotes for 30 stock items are managed.<br>
@@ -25,7 +15,7 @@ Launch the application, then click on "Start Lightstreamer" to connect to Lights
 
 To temporarily stop the DDE Server, without closing the Lightstreamer connection, click on "Toggle data feeding to Excel".
 
-## Dig the code ##
+## Dig the Code ##
 The application is divided into 3 main public classes (alphabetical order).
 * <b>DDEServer.java</b>: contains the actual DDE Server code. This part is responsible of receiving Lightstreamer data updates (and storing into an item cache) and feeding connected Excel instances trough postAdvise() update requests.
   For more info, please read the Neva Coroutine API reference.
@@ -78,7 +68,7 @@ The factory configuration of Lightstreamer server already provides this adapter 
 
 # See Also #
 
-## Lightstreamer Adapters needed by this demo client ##
+## Lightstreamer Adapters Needed by This Demo Client ##
 <!-- START RELATED_ENTRIES -->
 
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
@@ -86,7 +76,7 @@ The factory configuration of Lightstreamer server already provides this adapter 
 
 <!-- END RELATED_ENTRIES -->
 
-## Similar demo clients that may interest you ##
+## Related Projects ##
 
 * [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Weswit/Lightstreamer-example-Stocklist-client-javascript)
 * [Lightstreamer - Basic Stock-List Demo - jQuery (jqGrid) Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-jquery)
