@@ -3,8 +3,10 @@
 
 This project includes a demo client showing integration between [Lightstreamer Java SE Client](http://www.lightstreamer.com/docs/client_javase_api/index.html) and [Dynamic Data Exchange (DDE)](http://en.wikipedia.org/wiki/Dynamic_Data_Exchange) Server for Excel.
 
-[![screenshot](screen_excel_large.png)](http://demos.lightstreamer.com/Java_DDEDemo_Basic/demo.jnlp)<br>
-Click here to download and install the application: [http://demos.lightstreamer.com/Java_DDEDemo_Basic/demo.jnlp](http://demos.lightstreamer.com/Java_DDEDemo_Basic/demo.jnlp)<br>
+[![screenshot](screen_excel_large.png)](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip)<br>
+*To run this demo you must have Java for Windows x86 (32bit) installed*. If you don't have Java already installed, please download it from [here] (http://www.oracle.com/technetwork/java/javase/downloads/index.html).<BR/>
+To run the demo: [download it from here](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip); unzip *java-dde-stocklist-demo.zip*; launch `start.bat`.
+
 
 [Dynamic Data Exchange (DDE)](http://en.wikipedia.org/wiki/Dynamic_Data_Exchange) is a technology for communication between multiple applications under Microsoft Windows, often used for automatically filling a Microsoft Excel spreadsheet with data.<br>
 This Java application is basically a DDE bridge, which injects the real-time updates received from Lightstreamer Server into an Excel spreadsheet. The quotes for 30 stock items are managed.<br>
