@@ -33,10 +33,11 @@ If in trouble check out the [specific Lightstreamer forum](http://www.lightstrea
 
 # Build #
 
-If you want to skip the build and deploy processes of this demo please note that you can click the image or link above to download a ".jnlp" file ready for for the launch. Installation instructions:
-
-* Click the image or link above. A Java application will be downloaded and launched via [Java Web Start](http://en.wikipedia.org/wiki/Java_web_start) technology. If Java Web Start is not already installed, you will be automatically redirected to the download site.
-* When prompted, please accept the digital signature by "www.lightstreamer.com".
+If you want to skip the build and deploy processes of this demo please note that you can click the image or link above to download a ".zip" file ready for the launch.<br>
+Installation instructions:
+* Click the image or link above and download the file *java-dde-stocklist-demo.zip file*; 
+* unzip *java-dde-stocklist-demo.zip*; 
+* launch `start.bat`.
 <br>
 
 Otherwise, to directly import the project as is you need the Eclipse IDE and Neva Coroutine libraries installed in the default path. Moreover, you need to add Coroutine4Java.jar and JavaDde.jar to your Java build path, please refer to Eclipse documentation in order to know how to do so. These two .jar are found in the Neva product.<br>
