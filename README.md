@@ -1,12 +1,18 @@
-# Lightstreamer - Basic Stock-List Demo - Excel (DDE) Client #
+# Lightstreamer - Basic Stock-List Demo - Excel (DDE) Client
+
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-dde -->
 
 This project includes a demo client showing integration between [Lightstreamer Java SE Client](http://www.lightstreamer.com/docs/client_javase_api/index.html) and [Dynamic Data Exchange (DDE)](http://en.wikipedia.org/wiki/Dynamic_Data_Exchange) Server for Excel.
 
-[![screenshot](screen_excel_large.png)](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip)<br>
-*To run this demo you must have Java for Windows x86 (32bit) installed*. If you don't have Java already installed, please download it from [here] (http://www.oracle.com/technetwork/java/javase/downloads/index.html).<BR/>
-To run the demo: [download it from here](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip); unzip *java-dde-stocklist-demo.zip*; launch `start.bat`.
 
+## Live Demo
+
+[![screenshot](screen_excel_large.png)](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip)<br>
+###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip)<br>
+(download `java-dde-stocklist-demo.zip`; unzip it; launch `start.bat`)
+*To run this demo you must have Java for Windows x86 (32bit) installed. If you don't have Java already installed, please download it from [here] (http://www.oracle.com/technetwork/java/javase/downloads/index.html).<BR/>*
+
+## Details
 
 [Dynamic Data Exchange (DDE)](http://en.wikipedia.org/wiki/Dynamic_Data_Exchange) is a technology for communication between multiple applications under Microsoft Windows, often used for automatically filling a Microsoft Excel spreadsheet with data.<br>
 This Java application is basically a DDE bridge, which injects the real-time updates received from Lightstreamer Server into an Excel spreadsheet. The quotes for 30 stock items are managed.<br>
@@ -17,7 +23,8 @@ Launch the application, then click on "Start Lightstreamer" to connect to Lights
 
 To temporarily stop the DDE Server, without closing the Lightstreamer connection, click on "Toggle data feeding to Excel".
 
-## Dig the Code ##
+### Dig the Code
+
 The application is divided into 3 main public classes (alphabetical order).
 * <b>DDEServer.java</b>: contains the actual DDE Server code. This part is responsible of receiving Lightstreamer data updates (and storing into an item cache) and feeding connected Excel instances trough postAdvise() update requests.
   For more info, please read the Neva Coroutine API reference.
@@ -31,16 +38,19 @@ If in trouble check out the [specific Lightstreamer forum](http://www.lightstrea
 
 <!-- END DESCRIPTION lightstreamer-example-stocklist-client-dde -->
 
-# Build #
+## Install
 
-If you want to skip the build and deploy processes of this demo please note that you can click the image or link above to download a ".zip" file ready for the launch.<br>
-Installation instructions:
-* Click the image or link above and download the file *java-dde-stocklist-demo.zip file*; 
-* unzip *java-dde-stocklist-demo.zip*; 
-* launch `start.bat`.
-<br>
+If you want to install a version of this demo pointing to your local Lightstreamer Server, follow these steps:
 
-Otherwise, to directly import the project as is you need the Eclipse IDE and Neva Coroutine libraries installed in the default path. Moreover, you need to add Coroutine4Java.jar and JavaDde.jar to your Java build path, please refer to Eclipse documentation in order to know how to do so. These two .jar are found in the Neva product.<br>
+* Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
+* Launch Lightstreamer Server.
+* Download the `deploy.zip` file that you can find in the [deploy release](https://github.com/Weswit/Lightstreamer-example-StockList-client-dde/releases) of this project and extract the `deployment_local` folder.
+* Get the `ls-client.jar` file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) in the `/DOCS-SDKs/sdk_client_java_se/lib` folder and put it in the `deployment_local\lib` folder.
+* Launch `start.bat` from `deployment_local\bin` folder.
+
+## Build
+
+To build your own version of `java_dde_sld.jar`, instead of using the one provided in the deploy.zip file from the Install section above, and directly import the project as is you need the Eclipse IDE and Neva Coroutine libraries installed in the default path. Moreover, you need to add `Coroutine4Java.jar` and `JavaDde.jar` to your Java build path, please refer to Eclipse documentation in order to know how to do so. These two .jar are found in the Neva product.<br>
 For more information regarding the Neva Coroutine libraries that enables this application to communicate over DDE to Excel, go to [http://www.nevaobject.com](http://www.nevaobject.com).
 For more information regarding Eclipse and how to run it, please go to [http://www.eclipse.org](http://www.eclipse.org), just download the latest version in its "classic" package.
   
@@ -49,7 +59,7 @@ For more information regarding Eclipse and how to run it, please go to [http://w
 Obviously you also need to have the Lightstreamer server installed somewhere. If you don't have it, go download it here: http://www.lightstreamer.com/download.htm and follow the instructions in the package to install it.
 However, this release points to our demo Lightstreamer server, so if you just want to see how the application works, you can skip this step.
   
-From your Lightstreamer installation extract the files included in the Lightstreamer/DOCS-SDKs/sdk_client_java_se/lib folder and copy them into the lib/ folder of this project.<br>
+From your Lightstreamer installation extract the files included in the `Lightstreamer/DOCS-SDKs/sdk_client_java_se/lib` folder and copy them into the `lib/` folder of this project.<br>
 You're now ready to import the project into Eclipse.
 
 From Eclipse, to compile and run the application right-click on the project in the Package Explorer and click Run As -> Java Application.
@@ -63,15 +73,15 @@ pause
 ```
 <br>
   
-# Deploy #
+### Deploy
   
-You may want to make the demo application point to your Lightstreamer server. As written above, this is not mandatory. To do so, open src/javasedemo/dde/StockListDemo.java and change the "PUSH_SERVER_URL" variable value.
+You may want to make the demo application point to your Lightstreamer server. As written above, this is not mandatory. To do so, open `src/javasedemo/dde/StockListDemo.java` and change the "PUSH_SERVER_URL" variable value.
 The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) and [LiteralBasedProvider](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java) have to be deployed in your local Lightstreamer server instance. 
 The factory configuration of Lightstreamer server already provides this adapter deployed.<br>
 
-# See Also #
+## See Also
 
-## Lightstreamer Adapters Needed by This Demo Client ##
+### Lightstreamer Adapters Needed by This Demo Client
 <!-- START RELATED_ENTRIES -->
 
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
@@ -79,7 +89,7 @@ The factory configuration of Lightstreamer server already provides this adapter 
 
 <!-- END RELATED_ENTRIES -->
 
-## Related Projects ##
+### Related Projects
 
 * [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Weswit/Lightstreamer-example-Stocklist-client-javascript)
 * [Lightstreamer - Basic Stock-List Demo - jQuery (jqGrid) Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-jquery)
@@ -88,7 +98,7 @@ The factory configuration of Lightstreamer server already provides this adapter 
 * [Lightstreamer - Basic Stock-List Demo - Java SE (Swing) Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-java)
 * [Lightstreamer - Basic Stock-List Demo - Excel (RTD) Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-rtd)
 
-# Lightstreamer Compatibility Notes #
+## Lightstreamer Compatibility Notes
 
-- Compatible with Lightstreamer Java Client API v. 2.5.2 or newer.
-- For Lightstreamer Allegro (+ Java Client API support), Presto, Vivace.
+* Compatible with Lightstreamer Java Client API v. 2.5.2 or newer.
+* For Lightstreamer Allegro (+ Java Client API support), Presto, Vivace.
