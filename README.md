@@ -9,7 +9,7 @@ This project includes a demo client showing integration between [Lightstreamer J
 
 [![screenshot](screen_excel_large.png)](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip)<br>
 ###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip)<br>
-(download `java-dde-stocklist-demo.zip`; unzip it; launch `start.bat`)
+(download `java-dde-stocklist-demo.zip`; unzip it; launch `start.bat`)<br>
 *To run this demo you must have Java for Windows x86 (32bit) installed. If you don't have Java already installed, please download it from [here] (http://www.oracle.com/technetwork/java/javase/downloads/index.html).<BR/>*
 
 ## Details
