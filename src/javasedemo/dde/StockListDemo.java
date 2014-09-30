@@ -43,7 +43,8 @@ import com.lightstreamer.ls_client.ConnectionInfo;
 import com.lightstreamer.ls_client.ExtendedTableInfo;
 import com.lightstreamer.ls_client.SubscrException;
 import com.lightstreamer.ls_client.UpdateInfo;
-import com.neva.DdeException;
+
+import com.pretty_tools.dde.DDEException;
 
 public class StockListDemo extends JFrame implements LightstreamerConnectionHandler.StatusListener {
 
@@ -94,7 +95,7 @@ public class StockListDemo extends JFrame implements LightstreamerConnectionHand
 	private final boolean showUiUpdatesCounter = true;
 	private int updatesCounter = 0;
 	private final JLabel updatesLabel = new JLabel("No Lightstreamer updates");
-	private final DDEServer ddeServer;
+	private final LSDDEServer ddeServer;
 
 	class DdeButtonListener implements ActionListener {
 
@@ -106,8 +107,12 @@ public class StockListDemo extends JFrame implements LightstreamerConnectionHand
 				if (StockListDemo.this.connected) {
 					new Thread("ServerStop") {
 						public void run() {
-							StockListDemo.this.ddeServer.stop();
-							StockListDemo.this.ls.stop();
+						    try {
+						        StockListDemo.this.ddeServer.stop();
+						        StockListDemo.this.ls.stop();
+						    }  catch (DDEException e) {
+                                e.printStackTrace();
+                            }
 						}
 					}.start();
 
@@ -120,7 +125,7 @@ public class StockListDemo extends JFrame implements LightstreamerConnectionHand
 								StockListDemo.this.ddeServer.start();
 							} catch (TooManyListenersException e) {
 								e.printStackTrace();
-							} catch (DdeException e) {
+							} catch (DDEException e) {
 								e.printStackTrace();
 							}
 						}
@@ -128,7 +133,11 @@ public class StockListDemo extends JFrame implements LightstreamerConnectionHand
 
 				}
 			} else if (e.getActionCommand().equals("toggle")) {
-				StockListDemo.this.ddeServer.toggleFeeding();
+				try {
+                    StockListDemo.this.ddeServer.toggleFeeding();
+                } catch (DDEException ddee) {
+                    ddee.printStackTrace();
+                }
 			} else {
 
 				// copy to clipboard action
@@ -194,7 +203,7 @@ public class StockListDemo extends JFrame implements LightstreamerConnectionHand
 		}
 	}
 
-	private void setupLightstreamerClient(DDEServer ddeServer) {
+	private void setupLightstreamerClient(LSDDEServer ddeServer) {
         // configure the connection 
         ConnectionInfo cInfo = new ConnectionInfo();
         cInfo.pushServerUrl = StockListDemo.PUSH_SERVER_URL;
@@ -219,7 +228,7 @@ public class StockListDemo extends JFrame implements LightstreamerConnectionHand
 
 	public StockListDemo() {
 		// DDE variables
-		this.ddeServer = new DDEServer(items, fields, fieldNames);
+		this.ddeServer = new LSDDEServer(items, fields, fieldNames);
 		this.setupLightstreamerClient(this.ddeServer);
 
 		DdePanel panel = new DdePanel();
