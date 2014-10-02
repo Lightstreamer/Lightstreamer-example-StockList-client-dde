@@ -9,7 +9,7 @@ This project includes a demo client showing integration between [Lightstreamer J
 [![screenshot](screen_excel_large.png)](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip)<br>
 ###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/Java_DDEDemo_Basic/java-dde-stocklist-demo.zip)<br>
 (download `java-dde-stocklist-demo.zip`; unzip it; launch `start.bat`)<br>
-*To run this demo you must have a Java version installed in your machine. If you don't have Java already installed, please download it from [here] (http://www.oracle.com/technetwork/java/javase/downloads/index.html).<BR/>*
+*To run this demo, you must have Java installed in your machine. If you don't have Java already installed, please download it from [here] (http://www.oracle.com/technetwork/java/javase/downloads/index.html).<BR/>*
 
 ## Details
 
@@ -26,14 +26,14 @@ To temporarily stop the DDE Server, without closing the Lightstreamer connection
 
 The application is divided into 3 main public classes (alphabetical order).
 * <b>LSDDEServer.java</b>: contains the actual DDE Server code. This part is responsible of receiving Lightstreamer data updates (and storing into an item cache) and feeding connected Excel instances trough postAdvise() update requests.
-  For more info, please read the JDDE by Pretty Tools [API reference](http://jdde.pretty-tools.com/javadoc/index.html).
-* <b>LightstreamerConnectionHandler.java</b>: a LSClient class wrapper, exporting handy methods (like connect, changeStatus, subscribe, etc) used by the main <i>StockListDemo.java</i> class.
-* <b>StockListDemo.java</b>: it's the main Java/Swing application that is controlling Lightstreamer client and DDE Server interfaces. It is composed by a JFrame and several JPanel. For more info, please read the Oracle JDK API reference.
+  For more information, please read the JDDE by Pretty Tools [API reference](http://jdde.pretty-tools.com/javadoc/index.html).
+* <b>LightstreamerConnectionHandler.java</b>: a LSClient class wrapper, exporting handy methods (like connect, changeStatus, subscribe, etc.) used by the main <i>StockListDemo.java</i> class.
+* <b>StockListDemo.java</b>: it's the main Java/Swing application that is controlling Lightstreamer client and DDE Server interfaces. It is composed by a JFrame and several JPanel. For more information, please read the Oracle JDK API reference.
   
 Check out the sources for further explanations.
   
-<i>NOTE: not all the functionalities of the Lightstreamer Java SE Client & DDE Server demo are exposed by the classes listed above. You can easily expand those functionalities using the [Lightstreamer Java SE Client API](http://www.lightstreamer.com/docs/client_javase_javadoc/index.html) as a reference.<br>
-If in trouble check out the [specific Lightstreamer forum](http://www.lightstreamer.com/vb/forumdisplay.php?f=12). </i>
+<i>NOTE: Not all the functionalities of the Lightstreamer Java SE Client & DDE Server demo are exposed by the classes listed above. You can easily expand those functionalities using the [Lightstreamer Java SE Client API](http://www.lightstreamer.com/docs/client_javase_javadoc/index.html) as a reference.<br>
+If in trouble, check out the [specific Lightstreamer forum](http://www.lightstreamer.com/vb/forumdisplay.php?f=12). </i>
 
 <!-- END DESCRIPTION lightstreamer-example-stocklist-client-dde -->
 
@@ -56,17 +56,17 @@ the JDDE by Pretty Tools Java library.<br>
 For more information regarding the JDDE libraries that enables this application to communicate over DDE to Excel, go to [http://jdde.pretty-tools.com/](http://jdde.pretty-tools.com/).
 For more information regarding Eclipse and how to run it, please go to [http://www.eclipse.org](http://www.eclipse.org), just download the latest version in its "classic" package.
   
-<i>NOTE: You may also use the sources included in this project with another IDE or without any IDE but such approach is not covered in this readme. In any case you always need the JDDE libraries.</i>
+<i>NOTE: You may also use the sources included in this project with another IDE or without any IDE but such approach is not covered in this readme. In any case, you always need the JDDE libraries.</i>
 
-Obviously you also need to have the Lightstreamer server installed somewhere. If you don't have it, go download it here: http://www.lightstreamer.com/download.htm and follow the instructions in the package to install it.
+Obviously, you also need to have the Lightstreamer server installed somewhere. If you don't have it, go download it here: http://www.lightstreamer.com/download.htm and follow the instructions in the package to install it.
 However, this release points to our demo Lightstreamer server, so if you just want to see how the application works, you can skip this step.
   
-From your Lightstreamer installation extract the files included in the `Lightstreamer/DOCS-SDKs/sdk_client_java_se/lib` folder and copy them into the `lib/` folder of this project.<br>
+From your Lightstreamer installation, extract the files included in the `Lightstreamer/DOCS-SDKs/sdk_client_java_se/lib` folder and copy them into the `lib/` folder of this project.<br>
 You're now ready to import the project into Eclipse.
 
-From Eclipse, to compile and run the application right-click on the project in the Package Explorer and click Run As -> Java Application.
-At this point, your Lightstreamer Client & DDE Server demo is compiled and executed. Just click "Start Lightstreamer" to make the application connect to the configured Lightstreamer Push Server, then click on "Copy Excel data to clipboard", open a new Excel spreadsheet, right click on a cell and click "Paste". At this point, Excel will establish a hotlink to this demo application, which is at the same time streaming real-time data to it.
-Alternatively you can use a launch script like this:
+From Eclipse, to compile and run the application, right-click on the project in the Package Explorer and click Run As -> Java Application.
+At this point, your Lightstreamer Client & DDE Server demo is compiled and executed. Just click "Start Lightstreamer" to make the application connect to the configured Lightstreamer Push Server, then click on "Copy Excel data to clipboard", open a new Excel spreadsheet, right click on a cell and click "Paste". At this point, Excel will establish a hotlink to this demo application, which is simultaneously streaming real-time data to it.
+Alternatively, you can use a launch script like this:
 ```cmd
 @echo off
 
