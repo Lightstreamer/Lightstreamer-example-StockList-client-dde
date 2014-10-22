@@ -78,8 +78,8 @@ pause
 ### Deploy
   
 You may want to make the demo application point to your Lightstreamer server. As written above, this is not mandatory. To do so, open `src/javasedemo/dde/StockListDemo.java` and change the "PUSH_SERVER_URL" variable value.
-The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) and [LiteralBasedProvider](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java) have to be deployed in your local Lightstreamer server instance. 
-The factory configuration of Lightstreamer server already provides this adapter deployed.<br>
+The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) has to be deployed in your local Lightstreamer server instance;
+the [LiteralBasedProvider](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java) is also needed, but it is already provided by Lightstreamer server.<br>
 
 ## See Also
 
