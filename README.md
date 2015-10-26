@@ -41,9 +41,9 @@ If in trouble, check out the [specific Lightstreamer forum](http://www.lightstre
 
 If you want to install a version of this demo pointing to your local Lightstreamer Server, follow these steps:
 
-* Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
+* Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
-* Download the `deploy.zip` file that you can find in the [deploy release](https://github.com/Weswit/Lightstreamer-example-StockList-client-dde/releases) of this project and extract the `deployment_local` folder.
+* Download the `deploy.zip` file that you can find in the [deploy release](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-dde/releases) of this project and extract the `deployment_local` folder.
 * Get the `ls-client.jar` file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) in the `/DOCS-SDKs/sdk_client_java_se/lib` folder and put it in the `deployment_local/lib` folder.
 * Get the `pretty-tools-JDDE-2.0.3.jar` and `JavaDDEx64.dll` files from [pretty-tools-JDDE-2.0.3.zip](http://jdde.pretty-tools.com/downloads.php) and put the first in the `deployment_local/lib` folder and the latter in `deployment_local` folder.
   * Please note that if you run the demo on a 32-bit machine you have to choose `JavaDDE.dll` the intead of `JavaDDEx64.dll`.
@@ -78,27 +78,27 @@ pause
 ### Deploy
   
 You may want to make the demo application point to your Lightstreamer server. As written above, this is not mandatory. To do so, open `src/javasedemo/dde/StockListDemo.java` and change the "PUSH_SERVER_URL" variable value.
-The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) has to be deployed in your local Lightstreamer server instance;
-the [LiteralBasedProvider](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java) is also needed, but it is already provided by Lightstreamer server.<br>
+The example requires that the [QUOTE_ADAPTER](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java) has to be deployed in your local Lightstreamer server instance;
+the [LiteralBasedProvider](https://github.com/Lightstreamer/Lightstreamer-example-ReusableMetadata-adapter-java) is also needed, but it is already provided by Lightstreamer server.<br>
 
 ## See Also
 
 ### Lightstreamer Adapters Needed by This Demo Client
 <!-- START RELATED_ENTRIES -->
 
-* [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
-* [Lightstreamer - Reusable Metadata Adapters - Java Adapter](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
+* [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java)
+* [Lightstreamer - Reusable Metadata Adapters - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-ReusableMetadata-adapter-java)
 
 <!-- END RELATED_ENTRIES -->
 
 ### Related Projects
 
-* [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Weswit/Lightstreamer-example-Stocklist-client-javascript)
-* [Lightstreamer - Basic Stock-List Demo - jQuery (jqGrid) Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-jquery)
-* [Lightstreamer - Stock-List Demo - Dojo Toolkit Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-dojo)
-* [Lightstreamer - Basic Stock-List Demo - .NET Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-dotnet)
-* [Lightstreamer - Basic Stock-List Demo - Java SE (Swing) Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-java)
-* [Lightstreamer - Basic Stock-List Demo - Excel (RTD) Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-rtd)
+* [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript)
+* [Lightstreamer - Basic Stock-List Demo - jQuery (jqGrid) Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-jquery)
+* [Lightstreamer - Stock-List Demo - Dojo Toolkit Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-dojo)
+* [Lightstreamer - Basic Stock-List Demo - .NET Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-dotnet)
+* [Lightstreamer - Basic Stock-List Demo - Java SE (Swing) Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-java)
+* [Lightstreamer - Basic Stock-List Demo - Excel (RTD) Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-rtd)
 
 ## Lightstreamer Compatibility Notes
 
