@@ -32,7 +32,7 @@ The application is divided into 3 main public classes (alphabetical order).
   
 Check out the sources for further explanations.
   
-<i>NOTE: Not all the functionalities of the Lightstreamer Java SE Client & DDE Server demo are exposed by the classes listed above. You can easily expand those functionalities using the [Lightstreamer Java SE Client API](http://www.lightstreamer.com/docs/client_javase_javadoc/index.html) as a reference.<br>
+<i>NOTE: Not all the functionalities of the Lightstreamer Java SE Client & DDE Server demo are exposed by the classes listed above. You can easily expand those functionalities using the [Lightstreamer Java SE Client API](http://www.lightstreamer.com/docs/client_javase_api/index.html) as a reference.<br>
 If in trouble, check out the [specific Lightstreamer forum](http://www.lightstreamer.com/vb/forumdisplay.php?f=12). </i>
 
 <!-- END DESCRIPTION lightstreamer-example-stocklist-client-dde -->
