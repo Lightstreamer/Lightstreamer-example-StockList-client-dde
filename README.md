@@ -44,7 +44,7 @@ If you want to install a version of this demo pointing to your local Lightstream
 * Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
 * Download the `deploy.zip` file that you can find in the [deploy release](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-dde/releases) of this project and extract the `deployment_local` folder.
-* Get the `ls-client.jar` file from [Lightstreamer distribution](http://www.lightstreamer.com/download) (see compatibility notes below) in the `/DOCS-SDKs/sdk_client_java_se/lib` folder and put it in the `deployment_local/lib` folder.
+* Get the `ls-client.jar` file from [Lightstreamer distribution](http://www.lightstreamer.com/download/#ls5) (see compatibility notes below) in the `/DOCS-SDKs/sdk_client_java_se/lib` folder and put it in the `deployment_local/lib` folder.
 The version required by this demo can be found in Lightstreamer version 5.1.2.
 * Get the `pretty-tools-JDDE-2.0.3.jar` and `JavaDDEx64.dll` files from [pretty-tools-JDDE-2.0.3.zip](http://jdde.pretty-tools.com/downloads.php) and put the first in the `deployment_local/lib` folder and the latter in `deployment_local` folder.
   * Please note that if you run the demo on a 32-bit machine you have to choose `JavaDDE.dll` the intead of `JavaDDEx64.dll`.
