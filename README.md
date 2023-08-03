@@ -1,3 +1,5 @@
+<b>This project is considered obsolete and discontinued. For an example of integration with Excel that uses the most modern RTD mechanism, refer to this project: [Lightstreamer-example-StockList-client-rtd](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-rtd)</b>
+
 # Lightstreamer - Basic Stock-List Demo - Excel (DDE) Client
 
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-dde -->
